@@ -17,7 +17,6 @@ public class RedisContext {
     /**
      * 获取租户标识.
      *
-     * @author 	: <a href="mailto:wangtao@ebnew.com">wangtao</a>  2015-7-29 下午4:10:33
      * @return
      */
     public static String getTenant() {
@@ -27,7 +26,6 @@ public class RedisContext {
     /**
      * 设置租户标识.
      *
-     * @author 	: <a href="mailto:wangtao@ebnew.com">wangtao</a>  2015-7-29 下午4:11:01
      * @param tenant
      */
     public static void setTenant(String tenant) {
@@ -39,7 +37,6 @@ public class RedisContext {
     /**
      * 删除.
      *
-     * @author 	: <a href="mailto:wangtao@ebnew.com">wangtao</a>  2015-7-29 下午4:13:09
      */
     public static void remove() {
         TENANT_LOCAL.remove();

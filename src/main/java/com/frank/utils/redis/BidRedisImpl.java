@@ -30,7 +30,7 @@ public class BidRedisImpl implements BidRedis {
             return false;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -60,7 +60,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -89,7 +89,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -118,7 +118,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -175,7 +175,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -231,7 +231,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -260,7 +260,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -325,7 +325,7 @@ public class BidRedisImpl implements BidRedis {
             return "failed";
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -358,7 +358,7 @@ public class BidRedisImpl implements BidRedis {
             return "failed";
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -391,7 +391,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -429,7 +429,7 @@ public class BidRedisImpl implements BidRedis {
             return "failed";
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -462,7 +462,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -495,7 +495,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -524,7 +524,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -553,7 +553,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -582,7 +582,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -611,7 +611,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -648,7 +648,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long start = System.currentTimeMillis();
@@ -681,7 +681,7 @@ public class BidRedisImpl implements BidRedis {
             return false;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long start = System.currentTimeMillis();
@@ -719,7 +719,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long start = System.currentTimeMillis();
@@ -748,7 +748,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long start = System.currentTimeMillis();
@@ -789,7 +789,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long start = System.currentTimeMillis();
@@ -834,7 +834,7 @@ public class BidRedisImpl implements BidRedis {
             return false;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long start = System.currentTimeMillis();
@@ -867,7 +867,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long start = System.currentTimeMillis();
@@ -900,7 +900,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long start = System.currentTimeMillis();
@@ -929,7 +929,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long start = System.currentTimeMillis();
@@ -958,7 +958,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long start = System.currentTimeMillis();
@@ -997,7 +997,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1035,7 +1035,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1069,7 +1069,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1110,7 +1110,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1159,7 +1159,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1189,7 +1189,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1219,7 +1219,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1253,7 +1253,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1283,7 +1283,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1312,7 +1312,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1345,7 +1345,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1378,7 +1378,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1419,7 +1419,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1452,7 +1452,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1481,7 +1481,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1514,7 +1514,7 @@ public class BidRedisImpl implements BidRedis {
             return false;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1543,7 +1543,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1576,7 +1576,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1609,7 +1609,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1651,7 +1651,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1688,7 +1688,7 @@ public class BidRedisImpl implements BidRedis {
             return 0D;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1717,7 +1717,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1746,7 +1746,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1775,7 +1775,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1808,7 +1808,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1841,7 +1841,7 @@ public class BidRedisImpl implements BidRedis {
             return 0L;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1870,7 +1870,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1907,7 +1907,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1944,7 +1944,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -1981,7 +1981,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -2018,7 +2018,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -2055,7 +2055,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -2092,7 +2092,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -2129,7 +2129,7 @@ public class BidRedisImpl implements BidRedis {
             return null;
         }
 
-        // 增加租户标识 add by wangtao 2015-07-29
+        // 增加租户标识  
         key = RedisContext.getTenant() + key;
 
         Long begin = System.currentTimeMillis();
@@ -2204,7 +2204,6 @@ public class BidRedisImpl implements BidRedis {
     /**
      * 设置连接池.
      *
-     * @author wangtao 2013-11-29
      * @param shardedJedisPool
      */
     public void setShardedJedisPool(ShardedRedisPool shardedJedisPool) {

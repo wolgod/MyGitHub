@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 /**
+ * Redis Shard 接口
  * @author <a href="mailto:heshanshao@ebnew.com">Administrator</a>
  * @version V1.0
  * @date 2016/3/11
@@ -15,11 +16,10 @@ import java.util.Set;
  * @date 2016/3/11
  */
 /**
- * Redis Shard 接口.
+ * .
  *
  * @version Ver 1.0
- * @author <a href="mailto:wangtao@ebnew.com">wangtao</a>
- * @Date 2013-11-29 上午10:22:26
+ * @Date  上午10:22:26
  */
 public interface BidRedis {
 
@@ -28,7 +28,7 @@ public interface BidRedis {
      * <p>
      * key存在,返回true;否则,返回false.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank
      * @param key
      * @return
      */
@@ -39,7 +39,7 @@ public interface BidRedis {
      * <p>
      * key可以继续使用,返回1L;否则,返回0L.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -50,7 +50,7 @@ public interface BidRedis {
      * <p>
      * Redis中的数据类型,如:String,Set等.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -61,7 +61,7 @@ public interface BidRedis {
      * <p>
      * 设置成功,返回1L;设置失败,返回0L.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param seconds
      *            过期时间,单位为秒
@@ -85,7 +85,7 @@ public interface BidRedis {
      * <p>
      * 设置成功,返回1L;设置失败,返回0L.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank
      * @param key
      * @param unixTime
      *            相对1970后经过的秒数
@@ -109,7 +109,7 @@ public interface BidRedis {
      * <P>
      * 返回Key的有效时间,单位为秒.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -118,7 +118,7 @@ public interface BidRedis {
     /**
      * 删除指定的key.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -127,7 +127,7 @@ public interface BidRedis {
     /**
      * 删除指定的一组key.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param keys
      * @return
      */
@@ -142,7 +142,7 @@ public interface BidRedis {
      *
      * @see #getString(String)
      * @see #setString(String, int, String)
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param value
      * @return "OK" or "failed"
@@ -158,7 +158,7 @@ public interface BidRedis {
      *
      * @see #getString(String)
      * @see #setString(String, String)
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param seconds
      * @param value
@@ -174,7 +174,7 @@ public interface BidRedis {
      *
      * @see #setString(String, String)
      * @see #setString(String, int, String)
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -185,7 +185,7 @@ public interface BidRedis {
      * <p>
      * 字符串不能大于1GB.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param value
      * @return
@@ -201,7 +201,7 @@ public interface BidRedis {
      *
      * @see #getObject(String)
      * @see #setObject(String, int, Object)
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param value
      * @return "OK" or "failed"
@@ -217,7 +217,7 @@ public interface BidRedis {
      *
      * @see #getObject(String)
      * @see #setObject(String, Object)
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param seconds
      * @param value
@@ -233,7 +233,7 @@ public interface BidRedis {
      *
      * @see #setObject(String, Object)
      * @see #setObject(String, int, Object)
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -244,7 +244,7 @@ public interface BidRedis {
      * <p>
      * 对象不能大于1GB.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param value
      * @return
@@ -261,7 +261,7 @@ public interface BidRedis {
      * @see #decr(String)
      * @see #incrBy(String, long)
      * @see #decrBy(String, long)
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -273,7 +273,7 @@ public interface BidRedis {
      * @see #decrBy(String, long)
      * @see #decr(String)
      * @see #incr(String)
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param integer
      * @return
@@ -290,7 +290,7 @@ public interface BidRedis {
      * @see #incr(String)
      * @see #incrBy(String, long)
      * @see #decrBy(String, long)
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -302,7 +302,7 @@ public interface BidRedis {
      * @see #incrBy(String, long)
      * @see #decr(String)
      * @see #incr(String)
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param integer
      * @return
@@ -315,7 +315,7 @@ public interface BidRedis {
      * 如果字段已经存在,则更新field值,返回0L;<br>
      * 否则创建一新的field,返回1L.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param field
      * @param value
@@ -329,7 +329,7 @@ public interface BidRedis {
      * 操作成功,返回true;<br>
      * 否则,返回false.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param hash
      * @return
@@ -339,7 +339,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的hash中field对应的value.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param field
      * @return
@@ -349,7 +349,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的hash中所有的键(field)及其对应的value.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -358,7 +358,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的hash中field i对应的value.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param fields
      * @return
@@ -371,7 +371,7 @@ public interface BidRedis {
      * 存在,返回true;<br>
      * 否则,返回false.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param field
      * @return
@@ -384,7 +384,7 @@ public interface BidRedis {
      * 如果存在,删除,返回1L;<br>
      * 否则,返回0L,不执行操作.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param fields
      * @return
@@ -394,7 +394,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的hash中元素个数.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -403,7 +403,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的hash中所有键.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -412,7 +412,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的hash中所有键对应的value.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -423,7 +423,7 @@ public interface BidRedis {
      * <p>
      * 操作完成后的list长度.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param values
      * @return
@@ -433,7 +433,7 @@ public interface BidRedis {
     /**
      * 在名称为key的list头添加一个值为value的 元素.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param values
      * @return
@@ -443,7 +443,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的list的长度.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -452,7 +452,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的list中start至end之间的元素(下标从0开始).
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param start
      * @param end
@@ -463,7 +463,7 @@ public interface BidRedis {
     /**
      * 截取名称为key的list,保留start至end之间的元素.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param start
      * @param end
@@ -474,7 +474,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的list中index位置的元素.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param index
      * @return
@@ -484,7 +484,7 @@ public interface BidRedis {
     /**
      * 给名称为key的list中index位置的元素赋值为value.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param index
      * @param value
@@ -499,7 +499,7 @@ public interface BidRedis {
      * count>0,从头至尾删除count个值为value的元素;<br>
      * count<0,从尾到头删除count个值为value的元素.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param count
      * @param value
@@ -510,7 +510,7 @@ public interface BidRedis {
     /**
      * 返回并删除名称为key的list中的首元素.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -519,7 +519,7 @@ public interface BidRedis {
     /**
      * 返回并删除名称为key的list中的尾元素.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -528,7 +528,7 @@ public interface BidRedis {
     /**
      * 向名称为key的set中添加元素member i.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param members
      * @return
@@ -538,7 +538,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的set的所有元素.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -547,7 +547,7 @@ public interface BidRedis {
     /**
      * 删除名称为key的set中的元素member i.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param members
      * @return
@@ -557,7 +557,7 @@ public interface BidRedis {
     /**
      * 随机返回并删除名称为key的set中一个元素.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -566,7 +566,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的set的基数.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -575,7 +575,7 @@ public interface BidRedis {
     /**
      * 测试member是否是名称为key的set的元素.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param member
      * @return
@@ -585,7 +585,7 @@ public interface BidRedis {
     /**
      * 随机返回名称为key的set的一个元素.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -596,7 +596,7 @@ public interface BidRedis {
      * <p>
      * 如果该元素已经存在,则根据score更新该元素的顺序.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param score
      * @param member
@@ -609,7 +609,7 @@ public interface BidRedis {
      * <p>
      * 如果该元素已经存在,则根据score更新该元素的顺序.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param scoreMembers
      * @return
@@ -619,7 +619,7 @@ public interface BidRedis {
     /**
      * 删除名称为key的zset中的元素member i.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param members
      * @return
@@ -630,7 +630,7 @@ public interface BidRedis {
      * 如果在名称为key的zset中已经存在元素member,则该元素的score增加increment;<br>
      * 否则向集合中添加该元素,其score的值为increment.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param score
      * @param member
@@ -641,7 +641,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的zset的基数.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -650,7 +650,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的zset中元素element的score.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param member
      * @return
@@ -660,7 +660,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的zset中score >= min且score <= max的元素个数.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param min
      * @param max
@@ -673,7 +673,7 @@ public interface BidRedis {
      * 返回名称为key的zset(元素已按score从小到大排序)中member元素的rank(即index,从0开始),<br>
      * 若没有member元素,返回 "nil".
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param member
      * @return
@@ -684,7 +684,7 @@ public interface BidRedis {
      * 返回名称为key的zset(元素已按score从大到小排序)中member元素的rank(即index,从0开始),<br>
      * 若没有member元素,返回 "nil".
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param member
      * @return
@@ -694,7 +694,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的zset(元素已按score从小到大排序)中的index从start到end的所有元素.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param start
      * @param end
@@ -705,7 +705,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的zset(元素已按score从大到小排序)中的index从start到end的所有元素.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param start
      * @param end
@@ -716,7 +716,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的zset中score >= min且score <= max的所有元素(元素已按score从小到大排序).
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param min
      * @param max
@@ -727,7 +727,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的zset中score >= min且score <= max的所有元素(元素已按score从大到小排序).
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param max
      * @param min
@@ -738,7 +738,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的zset中score >= min且score <= max的count个元素(元素已按score从小到大排序).
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param min
      * @param max
@@ -751,7 +751,7 @@ public interface BidRedis {
     /**
      * 返回名称为key的zset中score >= min且score <= max的count个元素(元素已按score从大到小排序).
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param min
      * @param max
@@ -764,7 +764,7 @@ public interface BidRedis {
     /**
      * 排序.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @return
      */
@@ -773,7 +773,7 @@ public interface BidRedis {
     /**
      * 排序.
      *
-     * @author wangtao 2013-11-29
+     * @author Frank 
      * @param key
      * @param sortingParameters
      * @return

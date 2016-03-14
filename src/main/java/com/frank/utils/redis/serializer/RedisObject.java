@@ -16,7 +16,6 @@ import java.util.Arrays;
  * 
  * @description: TODO add description
  * @version Ver 1.0
- * @author <a href="mailto:wangtao@ebnew.com">wangtao</a>
  * @Date 2012-9-12 下午04:48:09
  */
 public class RedisObject {

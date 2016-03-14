@@ -6,10 +6,8 @@ import org.apache.log4j.Logger;
 import redis.clients.jedis.JedisPoolConfig;
 
 /**
- * 私有云专有.
- * 
+ *
  * @version : Ver 1.0
- * @author : <a href="mailto:wangtao@ebnew.com">wangtao</a>
  * @date : 2015-7-29 下午6:14:53
  */
 public class BidRedisFactory {
@@ -21,9 +19,6 @@ public class BidRedisFactory {
 
 	/**
 	 * 初始化.
-	 * 
-	 * @author : <a href="mailto:wangtao@ebnew.com">wangtao</a> 2015-8-21
-	 *         上午9:18:49
 	 * @return
 	 */
 	private static BidRedis initBidRedis() {
@@ -32,9 +27,9 @@ public class BidRedisFactory {
 				BidRedisConstant.getRedisConf());
 		// 配置连接池
 		JedisPoolConfig config = new JedisPoolConfig();
-		config.setMaxTotal(500);
-		config.setMaxIdle(50);
-		config.setMaxWaitMillis(3000L);
+		config.setMaxTotal(500); //最大连接数
+		config.setMaxIdle(50);// 对象最大空闲时间
+		config.setMaxWaitMillis(3000L);// 获取对象时最大等待时间
 		config.setTestOnBorrow(false);
 		config.setTestWhileIdle(true);
 		ShardedRedisPool shardedJedisPool = new ShardedRedisPool(config,
