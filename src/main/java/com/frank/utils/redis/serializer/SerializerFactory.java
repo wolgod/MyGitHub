@@ -1,8 +1,4 @@
 /**
- * Copyright (c) 2001-2010 Bidlink(Beijing) E-Biz Tech Co.,Ltd.
- * All rights reserved.
- * 必联（北京）电子商务科技有限公司 版权所有
- *
  * <p>SerializerFactory.java</p>
  *   
  */
