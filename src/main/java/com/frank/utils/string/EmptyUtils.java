@@ -50,7 +50,6 @@ public abstract class EmptyUtils {
 
     public static void main(String[] args) {
         System.out.println(EmptyUtils.isEmpty(" "));
-
         System.out.println(EmptyUtils.isEmpty("  "));
     }
 }

@@ -12,6 +12,7 @@ import redis.clients.jedis.JedisPoolConfig;
  */
 public class BidRedisFactory {
 	private static BidRedis bidRedis = null;
+	private static int index = 1;
 
 	private BidRedisFactory() {
 
@@ -27,8 +28,8 @@ public class BidRedisFactory {
 				BidRedisConstant.getRedisConf());
 		// 配置连接池
 		JedisPoolConfig config = new JedisPoolConfig();
-		config.setMaxTotal(500); //最大连接数
-		config.setMaxIdle(50);// 对象最大空闲时间
+		config.setMaxTotal(1000); //最大连接数
+		config.setMaxIdle(2000);// 对象最大空闲时间
 		config.setMaxWaitMillis(3000L);// 获取对象时最大等待时间
 		config.setTestOnBorrow(false);
 		config.setTestWhileIdle(true);
@@ -53,8 +54,20 @@ public class BidRedisFactory {
 	public static void main(String[] args) {
 
 		BidRedis bidRedis=BidRedisFactory.getBidRedis();
-		System.out.println(bidRedis.getString("c3af9374694b6a15f7766234e6d3f126_JZ_REG_USER_cgs1021llt"));
-
+		//System.out.println(bidRedis.getString("c3af9374694b6a15f7766234e6d3f126_JZ_REG_USER_cgs1021llt"));
+		for(int i=0; i<100; i++) {
+			String key=generateKey();
+			System.out.println(bidRedis.setString(key, "test111" + i));
+		}
+		//System.out.println(bidRedis.setString("test111_1", "test1"));
+		//System.out.println(bidRedis.getString("test_1"));
+      /* for(int i=0; i<100; i++) {
+			String key=generateKey();
+			System.out.println(bidRedis.getString(key));
+		}*/
+	}
+	public static String generateKey(){
+		return String.valueOf("test11C")+"_"+(index++);
 	}
 
 
