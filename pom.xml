@@ -28,7 +28,12 @@
         <version>4.0.7</version>
         <scope>compile</scope>
         </dependency>
-
+        <!--google guava 插件-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>13.0-rc1</version>
+        </dependency>
     </dependencies>
     
 </project>
