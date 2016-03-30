@@ -18,6 +18,7 @@ public class BidRedisConstant  {
 
 	public static String getRedisTook() {
 		return redisTook;
-	} 
+	}
+
 
 }
