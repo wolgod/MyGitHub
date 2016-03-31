@@ -4,7 +4,6 @@ import com.frank.utils.string.EmptyUtils;
 import com.google.common.cache.*;
 import com.google.common.collect.Maps;
 
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
@@ -21,28 +20,28 @@ public class GuavaCache {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
-        //»º´æ½Ó¿ÚÕâÀïÊÇLoadingCache£¬LoadingCacheÔÚ»º´æÏî²»´æÔÚÊ±¿ÉÒÔ×Ô¶¯¼ÓÔØ»º´æ
+        //ç¼“å­˜æ¥å£è¿™é‡Œæ˜¯LoadingCacheï¼ŒLoadingCacheåœ¨ç¼“å­˜é¡¹ä¸å­˜åœ¨æ—¶å¯ä»¥è‡ªåŠ¨åŠ è½½ç¼“å­˜
         LoadingCache<Integer,Student> studentCache
-                //CacheBuilderµÄ¹¹Ôìº¯ÊıÊÇË½ÓĞµÄ£¬Ö»ÄÜÍ¨¹ıÆä¾²Ì¬·½·¨newBuilder()À´»ñµÃCacheBuilderµÄÊµÀı
+                //CacheBuilderçš„æ„é€ å‡½æ•°æ˜¯ç§æœ‰çš„ï¼Œåªèƒ½é€šè¿‡å…¶é™æ€æ–¹æ³•newBuilder()æ¥è·å¾—CacheBuilderçš„å®ä¾‹
                 = CacheBuilder.newBuilder()
-                //ÉèÖÃ²¢·¢¼¶±ğÎª8£¬²¢·¢¼¶±ğÊÇÖ¸¿ÉÒÔÍ¬Ê±Ğ´»º´æµÄÏß³ÌÊı
+                //è®¾ç½®å¹¶å‘çº§åˆ«ä¸º8ï¼Œå¹¶å‘çº§åˆ«æ˜¯æŒ‡å¯ä»¥åŒæ—¶å†™ç¼“å­˜çš„çº¿ç¨‹æ•°
                 .concurrencyLevel(8)
-                        //ÉèÖÃĞ´»º´æºó8ÃëÖÓ¹ıÆÚ
+                        //è®¾ç½®å†™ç¼“å­˜å8ç§’é’Ÿè¿‡æœŸ
                 .expireAfterWrite(8, TimeUnit.SECONDS)
-                        //ÉèÖÃ»º´æÈİÆ÷µÄ³õÊ¼ÈİÁ¿Îª10
+                        //è®¾ç½®ç¼“å­˜å®¹å™¨çš„åˆå§‹å®¹é‡ä¸º10
                 .initialCapacity(10)
-                        //ÉèÖÃ»º´æ×î´óÈİÁ¿Îª100£¬³¬¹ı100Ö®ºó¾Í»á°´ÕÕLRU×î½üËäÉÙÊ¹ÓÃËã·¨À´ÒÆ³ı»º´æÏî
+                        //è®¾ç½®ç¼“å­˜æœ€å¤§å®¹é‡ä¸º100ï¼Œè¶…è¿‡100ä¹‹åå°±ä¼šæŒ‰ç…§LRUæœ€è¿‘è™½å°‘ä½¿ç”¨ç®—æ³•æ¥ç§»é™¤ç¼“å­˜é¡¹
                 .maximumSize(100)
-                        //ÉèÖÃÒªÍ³¼Æ»º´æµÄÃüÖĞÂÊ
+                        //è®¾ç½®è¦ç»Ÿè®¡ç¼“å­˜çš„å‘½ä¸­ç‡
                 .recordStats()
-                        //ÉèÖÃ»º´æµÄÒÆ³ıÍ¨Öª
+                        //è®¾ç½®ç¼“å­˜çš„ç§»é™¤é€šçŸ¥
                 .removalListener(new RemovalListener<Object, Object>() {
                     @Override
                     public void onRemoval(RemovalNotification<Object, Object> notification) {
                         System.out.println(notification.getKey() + " was removed, cause is " + notification.getCause());
                     }
                 })
-                        //build·½·¨ÖĞ¿ÉÒÔÖ¸¶¨CacheLoader£¬ÔÚ»º´æ²»´æÔÚÊ±Í¨¹ıCacheLoaderµÄÊµÏÖ×Ô¶¯¼ÓÔØ»º´æ
+                        //buildæ–¹æ³•ä¸­å¯ä»¥æŒ‡å®šCacheLoaderï¼Œåœ¨ç¼“å­˜ä¸å­˜åœ¨æ—¶é€šè¿‡CacheLoaderçš„å®ç°è‡ªåŠ¨åŠ è½½ç¼“å­˜
                 .build(
                         new CacheLoader<Integer, Student>() {
                             @Override
@@ -61,42 +60,42 @@ public class GuavaCache {
         System.out.println(cache.getIfPresent("test1"));
         for (int i=0;i<5;i++) {
 
-             Thread t=new Thread(new Runnable() {
-                 @Override
-                 public void run() {
-                     while (!status) {
-                         try {
-                             System.out.println("current thread " + Thread.currentThread().getId()+":"+System.currentTimeMillis());
-                             Thread.sleep(1000);
-                         } catch (InterruptedException e) {
-                             e.printStackTrace();
-                         }
-                     }
-                 }
-             });
-             t.setDaemon(true);
-             t.setName("name"+i);
-             t.start();
+            Thread t=new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    while (!status) {
+                        try {
+                            System.out.println("current thread " + Thread.currentThread().getId()+":"+System.currentTimeMillis());
+                            Thread.sleep(1000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            });
+            t.setDaemon(true);
+            t.setName("name"+i);
+            t.start();
 
-         }
+        }
         long end=0L;
 
         while(!status){
-           if(EmptyUtils.isEmpty(cache.getIfPresent("test1"))) {
-               end=System.currentTimeMillis();
-               status = true;
-           }
+            if(EmptyUtils.isEmpty(cache.getIfPresent("test1"))) {
+                end=System.currentTimeMillis();
+                status = true;
+            }
         }
        /* for (int i=0;i<20;i++) {
-            //´Ó»º´æÖĞµÃµ½Êı¾İ£¬ÓÉÓÚÎÒÃÇÃ»ÓĞÉèÖÃ¹ı»º´æ£¬ËùÒÔĞèÒªÍ¨¹ıCacheLoader¼ÓÔØ»º´æÊı¾İ
+            //ä»ç¼“å­˜ä¸­å¾—åˆ°æ•°æ®ï¼Œç”±äºæˆ‘ä»¬æ²¡æœ‰è®¾ç½®è¿‡ç¼“å­˜ï¼Œæ‰€ä»¥éœ€è¦é€šè¿‡CacheLoaderåŠ è½½ç¼“å­˜æ•°æ®
             Student student = studentCache.get(1);
             System.out.println(student);
-            //ĞİÃß1Ãë
+            //ä¼‘çœ 1ç§’
             TimeUnit.SECONDS.sleep(1);
         }*/
 
         System.out.println("cache stats:");
-        //×îºó´òÓ¡»º´æµÄÃüÖĞÂÊµÈ Çé¿ö
+        //æœ€åæ‰“å°ç¼“å­˜çš„å‘½ä¸­ç‡ç­‰ æƒ…å†µ
         System.out.println(cache.stats().toString());
         System.out.println(end-start+":"+(end-start)/1000);
         Map<String,String> maps= Maps.newHashMap();

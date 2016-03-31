@@ -2,6 +2,7 @@ package com.frank.utils.VM;
 
 import sun.misc.Unsafe;
 
+import java.lang.ref.SoftReference;
 import java.lang.reflect.Field;
 
 /**
