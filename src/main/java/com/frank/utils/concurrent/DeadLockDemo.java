@@ -4,11 +4,13 @@ package com.frank.utils.concurrent;
  * @author <a href="mailto:heshanshao@ebnew.com">Administrator</a>
  * @version V1.0
  * @date 2016/4/6
+ * @description   死锁场景是两个锁互相等待对方释放资源
  */
 public class DeadLockDemo {
     private  static  String A="A";
     private  static  String B="B";
-
+    private    A1 a1=new A1();
+    private    B1 b1=new B1();
     public static void main(String[] args) {
         new DeadLockDemo().deadLock();
     }
@@ -17,13 +19,15 @@ public class DeadLockDemo {
         Thread t1=new Thread(new Runnable() {
             @Override
             public void run() {
-                synchronized (A){
+                synchronized (a1){
                     try {
+                        System.out.println("t1进入A..");
                         Thread.currentThread().sleep(2000);
                     }catch (Exception e){
                         e.printStackTrace();
                     }
-                    synchronized (B){
+                    System.out.println("t1要进入B..");
+                    synchronized (b1){
                         System.out.println("1");
                     }
                 }
@@ -33,8 +37,10 @@ public class DeadLockDemo {
         Thread t2=new Thread(new Runnable() {
             @Override
             public void run() {
-                synchronized (B){
-                    synchronized (A){
+
+                synchronized (b1){
+                    System.out.println("t2进入b1..");
+                    synchronized (a1){
                         System.out.println("2");
                     }
                 }
@@ -43,4 +49,11 @@ public class DeadLockDemo {
         t1.start();
         t2.start();
     }
+
+}
+class  A1{
+
+}
+class  B1{
+
 }
