@@ -10,12 +10,12 @@ import com.heshan.framework.common.string.EmptyUtils;
 public class RedisContext {
 
     /**
-     * ��¼�⻧��ʶ
+     * 租户变量
      */
     private final static InheritableThreadLocal<String> TENANT_LOCAL = new InheritableThreadLocal<String>();
 
     /**
-     * ��ȡ�⻧��ʶ.
+     * 获取租户
      *
      * @return
      */
@@ -24,7 +24,7 @@ public class RedisContext {
     }
 
     /**
-     * �����⻧��ʶ.
+     * 设置租户
      *
      * @param tenant
      */
