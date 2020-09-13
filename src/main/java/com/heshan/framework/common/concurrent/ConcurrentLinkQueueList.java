@@ -10,7 +10,6 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.atomic.AtomicLong;
 
 public class ConcurrentLinkQueueList {
     static ConcurrentLinkedQueue linkedQueue=new ConcurrentLinkedQueue();
